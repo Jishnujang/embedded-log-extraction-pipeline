@@ -56,41 +56,424 @@
     }
   },
   {
-  "log_id": "log_007",
-  "raw_log": "[16:10:04] ARDUINO-UNO-15 FW:0.9.8 ERROR E401: GPS module not detected.",
-  "expected": {
-    "extraction_status": "extracted",
-    "device_id": "ARDUINO-UNO-15",
-    "firmware_version": "0.9.8",
-    "error_code": "E401",
-    "affected_module": "gps_module",
-    "severity": "medium"
+    "log_id": "log_007",
+    "raw_log": "[16:10:04] ARDUINO-UNO-15 FW:0.9.8 ERROR E401: GPS module not detected.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ARDUINO-UNO-15",
+      "firmware_version": "0.9.8",
+      "error_code": "E401",
+      "affected_module": "gps_module",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_008",
+    "raw_log": "[16:45:22] NODEMCU-21 FW:2.3.0 ERROR E502: battery voltage below safe threshold.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "NODEMCU-21",
+      "firmware_version": "2.3.0",
+      "error_code": "E502",
+      "affected_module": "battery",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_009",
+    "raw_log": "[17:02:10] ESP32-008 firmware 1.8.0: system heartbeat received; all services healthy.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_010",
+    "raw_log": "Field report: controller sometimes stops responding after several hours. Device and error code were not recorded.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_011",
+    "raw_log": "[12:11:00] STM32-B01 FW:2.1.0 ERROR E601: CAN bus communication lost.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "STM32-B01",
+      "firmware_version": "2.1.0",
+      "error_code": "E601",
+      "affected_module": "can_bus",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_012",
+    "raw_log": "[12:12:00] ESP32-011 FW:1.5.0 ERROR E602: IMU calibration failed.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ESP32-011",
+      "firmware_version": "1.5.0",
+      "error_code": "E602",
+      "affected_module": "imu",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_013",
+    "raw_log": "[12:13:00] NRF52-22 FW:3.2.1 ERROR E603: flash write operation failed.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "NRF52-22",
+      "firmware_version": "3.2.1",
+      "error_code": "E603",
+      "affected_module": "flash_memory",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_014",
+    "raw_log": "[12:14:00] RPI-PICO-12 FW:1.0.3 ERROR E604: ADC reading outside expected range.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "RPI-PICO-12",
+      "firmware_version": "1.0.3",
+      "error_code": "E604",
+      "affected_module": "adc",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_015",
+    "raw_log": "[12:15:00] ARDUINO-MEGA-05 FW:2.4.0 ERROR E605: PWM driver overheated.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ARDUINO-MEGA-05",
+      "firmware_version": "2.4.0",
+      "error_code": "E605",
+      "affected_module": "pwm_driver",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_016",
+    "raw_log": "[12:16:00] NODEMCU-30 FW:2.5.1 ERROR E606: Wi-Fi connection repeatedly dropped.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "NODEMCU-30",
+      "firmware_version": "2.5.1",
+      "error_code": "E606",
+      "affected_module": "wifi",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_017",
+    "raw_log": "[12:17:00] ESP8266-14 FW:1.9.2 ERROR E607: GPIO pin configuration failed.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ESP8266-14",
+      "firmware_version": "1.9.2",
+      "error_code": "E607",
+      "affected_module": "gpio",
+      "severity": "low"
+    }
+  },
+  {
+    "log_id": "log_018",
+    "raw_log": "[12:18:00] STM32-F4-09 FW:4.0.0 ERROR E608: Ethernet link was not established.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "STM32-F4-09",
+      "firmware_version": "4.0.0",
+      "error_code": "E608",
+      "affected_module": "ethernet",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_019",
+    "raw_log": "[12:19:00] TEENSY-41-03 FW:1.3.5 ERROR E609: SD card could not be mounted.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "TEENSY-41-03",
+      "firmware_version": "1.3.5",
+      "error_code": "E609",
+      "affected_module": "sd_card",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_020",
+    "raw_log": "[12:20:00] ESP32-S3-07 FW:2.0.4 ERROR E610: Bluetooth pairing failed.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ESP32-S3-07",
+      "firmware_version": "2.0.4",
+      "error_code": "E610",
+      "affected_module": "bluetooth",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_021",
+    "raw_log": "[12:21:00] NRF52-31 FW:3.4.0 ERROR E611: accelerometer returned invalid values.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "NRF52-31",
+      "firmware_version": "3.4.0",
+      "error_code": "E611",
+      "affected_module": "accelerometer",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_022",
+    "raw_log": "[12:22:00] RPI-PICO-W-06 FW:1.2.0 ERROR E612: real-time clock synchronization failed.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "RPI-PICO-W-06",
+      "firmware_version": "1.2.0",
+      "error_code": "E612",
+      "affected_module": "rtc",
+      "severity": "low"
+    }
+  },
+  {
+    "log_id": "log_023",
+    "raw_log": "[12:23:00] STM32-G0-16 FW:2.2.3 ERROR E613: watchdog reset triggered.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "STM32-G0-16",
+      "firmware_version": "2.2.3",
+      "error_code": "E613",
+      "affected_module": "watchdog_timer",
+      "severity": "critical"
+    }
+  },
+  {
+    "log_id": "log_024",
+    "raw_log": "[12:24:00] ESP32-C6-02 FW:1.1.1 ERROR E614: input voltage dropped below limit.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ESP32-C6-02",
+      "firmware_version": "1.1.1",
+      "error_code": "E614",
+      "affected_module": "power_supply",
+      "severity": "critical"
+    }
+  },
+  {
+    "log_id": "log_025",
+    "raw_log": "[12:25:00] ARDUINO-NANO-18 FW:0.8.9 ERROR E615: OLED display did not respond.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ARDUINO-NANO-18",
+      "firmware_version": "0.8.9",
+      "error_code": "E615",
+      "affected_module": "display",
+      "severity": "low"
+    }
+  },
+  {
+    "log_id": "log_026",
+    "raw_log": "[12:26:00] NODEMCU-44 FW:2.7.0 ERROR E616: keypad input scan failed.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "NODEMCU-44",
+      "firmware_version": "2.7.0",
+      "error_code": "E616",
+      "affected_module": "keypad",
+      "severity": "low"
+    }
+  },
+  {
+    "log_id": "log_027",
+    "raw_log": "[12:27:00] STM32-L4-21 FW:3.0.2 ERROR E617: motor controller reported overload.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "STM32-L4-21",
+      "firmware_version": "3.0.2",
+      "error_code": "E617",
+      "affected_module": "motor_controller",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_028",
+    "raw_log": "[12:28:00] ESP32-DEV-33 FW:1.6.2 ERROR E618: gyroscope data stream stopped.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "ESP32-DEV-33",
+      "firmware_version": "1.6.2",
+      "error_code": "E618",
+      "affected_module": "gyroscope",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_029",
+    "raw_log": "[12:29:00] RPI-PICO-19 FW:1.5.4 ERROR E619: relay state did not change.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "RPI-PICO-19",
+      "firmware_version": "1.5.4",
+      "error_code": "E619",
+      "affected_module": "relay",
+      "severity": "medium"
+    }
+  },
+  {
+    "log_id": "log_030",
+    "raw_log": "[12:30:00] TEENSY-40-11 FW:2.3.1 ERROR E620: actuator movement timeout.",
+    "expected": {
+      "extraction_status": "extracted",
+      "device_id": "TEENSY-40-11",
+      "firmware_version": "2.3.1",
+      "error_code": "E620",
+      "affected_module": "actuator",
+      "severity": "high"
+    }
+  },
+  {
+    "log_id": "log_031",
+    "raw_log": "ESP32-012 firmware 1.5.1 boot completed normally.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_032",
+    "raw_log": "STM32-B02 firmware 2.1.1 completed routine health check.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_033",
+    "raw_log": "NRF52-23 entered low-power sleep mode successfully.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_034",
+    "raw_log": "RPI-PICO-13 Wi-Fi connection established successfully.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_035",
+    "raw_log": "ARDUINO-MEGA-06 system clock configured successfully.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_036",
+    "raw_log": "NODEMCU-31 sent telemetry packet successfully.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_037",
+    "raw_log": "ESP8266-15 restarted normally after scheduled update.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_038",
+    "raw_log": "STM32-F4-10 sensor calibration completed successfully.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_039",
+    "raw_log": "TEENSY-41-04 firmware update completed without errors.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_040",
+    "raw_log": "ESP32-S3-08 all diagnostic checks passed.",
+    "expected": {
+      "extraction_status": "no_relevant_fields"
+    }
+  },
+  {
+    "log_id": "log_041",
+    "raw_log": "Field engineer reported an intermittent fault but recorded no device details.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_042",
+    "raw_log": "The unit stopped working sometime during testing; no log was captured.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_043",
+    "raw_log": "A customer reported unusual behaviour after several hours of use.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_044",
+    "raw_log": "Technician noted a possible hardware problem, but details are missing.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_045",
+    "raw_log": "Device became unresponsive according to the test report.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_046",
+    "raw_log": "An unknown issue was mentioned in the maintenance notes.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_047",
+    "raw_log": "System performance appeared unstable; no error code was available.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_048",
+    "raw_log": "A fault was suspected during operation but could not be reproduced.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_049",
+    "raw_log": "Operator reported a problem with the controller without further details.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
+  },
+  {
+    "log_id": "log_050",
+    "raw_log": "An incomplete report states that the board may have failed.",
+    "expected": {
+      "extraction_status": "needs_review"
+    }
   }
-},
-{
-  "log_id": "log_008",
-  "raw_log": "[16:45:22] NODEMCU-21 FW:2.3.0 ERROR E502: battery voltage below safe threshold.",
-  "expected": {
-    "extraction_status": "extracted",
-    "device_id": "NODEMCU-21",
-    "firmware_version": "2.3.0",
-    "error_code": "E502",
-    "affected_module": "battery",
-    "severity": "high"
-  }
-},
-{
-  "log_id": "log_009",
-  "raw_log": "[17:02:10] ESP32-008 firmware 1.8.0: system heartbeat received; all services healthy.",
-  "expected": {
-    "extraction_status": "no_relevant_fields"
-  }
-},
-{
-  "log_id": "log_010",
-  "raw_log": "Field report: controller sometimes stops responding after several hours. Device and error code were not recorded.",
-  "expected": {
-    "extraction_status": "needs_review"
-  }
-}
 ]
+
+
+
